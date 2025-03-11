@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Data
+data/proteomics/data/*
+data/proteomics/R_data/*
+
 # C extensions
 *.so
 

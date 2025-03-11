@@ -1,0 +1,24 @@
+- ProteinMatrix_sampleID_MapEC50_20240229.csv
+raw data as provided by guomics
+
+- prepData.RData
+preprocessed data by R/data_preprocessing.r
+mainly na imputation and organizing of Drug matrix
+
+- combData.RData
+data for P_t ~ P_0, D
+
+- aggData.RData
+data for IC50 ~ P_0, P_6, P_24, P_48, D
+
+- aggData_diff.RData
+data for IC50 ~ P_6-0, P_24-6, P_48-24, D
+
+- protNames.RData
+vectors with the different protein names for different datasets
+prot_names -> raw protein names for prepData.RData and combData.RData
+prot_names_0 -> aggregated proteins at timepoint 0 in aggData.RData and aggData_diff.RData
+prot_names_6 -> aggregated proteins at timepoint 6 in aggData.RData and aggData_diff.RData
+prot_names_24 -> aggregated proteins at timepoint 24 in aggData.RData and aggData_diff.RData
+prot_names_48 -> aggregated proteins at timepoint 48 in aggData.RData and aggData_diff.RData
+prot_names_baseline -> aggregated proteins at timepoint 0 in combData.RData
