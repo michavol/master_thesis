@@ -10,13 +10,13 @@ warnings.simplefilter('ignore')
 
 from importlib.metadata import version
 
-package_name = "pdpa-tools"
-__version__ = version(package_name)
+# package_name = "pdpa-tools"
+# __version__ = version(package_name)
 
-__all__ = [
-    "PDPA",
-    "PDPAModule",
-    # "ComPertAPI",
-    # "pl",
-    # "run_autotune"
-]
+# __all__ = [
+#     # "PDPA",
+#     # "PDPAModule",
+#     # "ComPertAPI",
+#     # "pl",
+#     # "run_autotune"
+# ]
