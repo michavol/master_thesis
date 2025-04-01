@@ -7,12 +7,15 @@ It reads in raw data and presents it in a usable format.
 import pandas as pd
 import numpy as np
 
+DATA_PATH = '../../../data/ProteinMatrix_sampleID_MapEC50_20240229.csv'
+SAVE_PATH = '../../../data/guomics_ptv1_reformatted.csv'
+
 def main():
     # ----------------------------------------------------------------------
     # 1. Read data
     # ----------------------------------------------------------------------
     # Adjust the path/filename as needed:
-    dat = pd.read_csv('data/ProteinMatrix_sampleID_MapEC50_20240229.csv', 
+    dat = pd.read_csv(DATA_PATH, 
                       index_col="Sample_ID",
                       low_memory=False)
     
@@ -126,7 +129,7 @@ def main():
     # ----------------------------------------------------------------------
     # 12. Save final data
     # ----------------------------------------------------------------------
-    data_final.to_csv('data/raw_reformatted.csv')
+    data_final.to_csv(SAVE_PATH)
 
     
     print("Data reformatting complete. Example final shape:", data_final.shape)

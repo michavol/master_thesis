@@ -1,5 +1,6 @@
 # Setupt
-VPN: michavol@math-guest.ethz.ch
+VPN Host: sslvpn.ethz.ch/math-guest
+VPN User: michavol@math-guest.ethz.ch
 Sever: ssh michavol@ada-27.math.ethz.ch
 ada-23 or ada-27 (better GPUs)
 python -m venv .venv

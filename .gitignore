@@ -4,8 +4,7 @@ __pycache__/
 *$py.class
 
 # Data
-data/proteomics/data/*
-data/proteomics/tiannan/R_data/*
+data_preparation/proteomics/tiannan/R_data/*
 
 # C extensions
 *.so

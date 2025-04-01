@@ -18,12 +18,15 @@ import ast
 import scanpy as sc
 pd.options.mode.copy_on_write = True
 
+DATA_PATH = '../../../data/guomics_ptv1_reformatted.csv'
+SAVE_PATH = '../../../data/guomics_ptv1_preprocessed_small.h5ad'
+
 def main():
     # ----------------------------------------------------------------------
     # 1. Read data
     # ----------------------------------------------------------------------
     # Adjust the path/filename as needed:
-    dat = pd.read_csv('data/raw_reformatted.csv', index_col=0)
+    dat = pd.read_csv(DATA_PATH, index_col=0)
 
     # Make small dataset for testing
     dat = dat.loc[(dat['pert_time'] == 24) | (dat['pert_time'] == 0)]
@@ -120,7 +123,7 @@ def main():
     # ----------------------------------------------------------------------
     # 8. Save data
     # ----------------------------------------------------------------------
-    adata.write("data/preprocessed_small.h5ad")
+    adata.write(SAVE_PATH)
     
     print("Data preprocessing complete. Example final shape:", adata.shape)
 
