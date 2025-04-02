@@ -12,10 +12,13 @@ source .venv/bin/activate
 
 # Run Jobs
 nice -n 7 <command line> #for running python scripts
-nvidia-smi  #for checking gpu load
 tmux        #for being able to close the connection
 quota -v    #for checking memory consumption
 FileZilla   #for data transfer
+nvidia-smi  #for Checking gpu load
+btop        #for Process monitoring
+
+nvidia-smi && (nvidia-smi |tr -s ' '|grep -Eo "| [0123456789]+ N/A N/A [0-9]{3,} .*"|awk -F' ' '{system("s=$(cat /proc/"$4"/cmdline| tr \"\\0\" \" \");u=$(ps -o uname= -p "$4");echo "$1"sep"$4"sep$u sep"$7"sep$s" ) }'|sed 's/sep/\t/g') # Check username of GPU processes
 
 # File Zilla
 Host: sftp://sftpmath.math.ethz.ch
